@@ -1,0 +1,107 @@
+/* ШРИФТЫ===============================================================================================================*/
+
+/*ШРИФТ ПО УМОЛЧАНИЮ======================================================================================================*/
+$font-family: 'Xanh Mono', monospace;
+
+/*ПЕРЕМЕННЫЕ==============================================================================================================*/
+$minWidth: 320px;
+$maxWidth: 1920px; //общая ширина макета
+$maxWidthContainer: 1230px; //увеличиваем величину из макета с учетом паддингов
+$md1: 1242px; //$maxWidthContainer + 12px
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+/*ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ==============================================================================================*/
+@import "null";
+
+body {
+	font-family: $font-family;
+	font-weight: 400;
+	color: #fff;
+	font-size: 18px;
+	
+}
+
+/*ОБОЛОЧКА===============================================================================================================*/
+
+.wrapper {
+	background: linear-gradient(-50deg, #2b3694, #fdfdfd);
+	min-width: 100%;
+}
+
+
+/*ОСНОВНАЯ СЕТКА====================================================================================*/
+
+._container {
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	padding: 0px 25px;
+ }
+ 
+/*MAIN===============================================================*/
+.page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+
+	
+	// .page__stopwatch
+
+	&__stopwatch {
+		
+	}
+
+	
+}
+
+.stopwatch-page {
+
+
+	// .stopwatch-page__stopwatch
+
+	&__stopwatch {
+		font-size: 70px;
+		margin-bottom: 40px; 
+		text-align: center;
+		@media(max-width: $md4) {
+			font-size: 50px;
+			margin-bottom: 20px; 
+		}
+	}
+
+	// .stopwatch-page__buttons
+
+	&__buttons {
+		display: flex;
+		justify-content: center;
+	};
+
+	// .stopwatch-page__button
+
+	&__button {
+		border-radius: 20px;
+		border: 1px solid rgb(11, 31, 132);
+		padding: 10px 0px;
+		background: #2b3694;
+		margin: 0px 20px;
+		box-shadow: 0px 5px 10px rgba(5, 3, 55, 0.5);
+		color: #fff;
+		width: 100px;
+		letter-spacing: 2px;
+		&:active {
+			box-shadow: none;
+		}
+		@media(max-width: $md4) {
+			margin: 0px 10px;
+			width: 70px;
+		}
+
+	}
+
+}
+
+
+
+
+
